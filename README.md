@@ -5,7 +5,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
 [![Android Kotlin](https://img.shields.io/badge/Android-Kotlin%20%7C%20TFLite-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/badge/License-Proprietary-red.svg?style=for-the-badge)](LICENSE)
 
 > **Specs_Blind** is an intelligent assistive vision wearable system engineered from the ground up for blind and low-vision users. Combining real-time computer vision (YOLOv8), Kalman filter obstacle tracking, intelligent 4-tier urgency audio feedback, multi-pattern haptic vibration, and adaptive power management, Specs_Blind empowers users to navigate both indoor and outdoor environments safely and independently.
 
@@ -395,10 +395,6 @@ Contributions are welcome! If you have ideas for improvements, bug fixes, or new
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+Copyright &copy; 2026 Himanshu Jain. All rights reserved. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-<p align=\"center\">
-  Built with ❤️ for accessible, barrier-free navigation.
-</p>
