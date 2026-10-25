@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Goggle</string>
+    
+    <!-- Main Activity -->
+    <string name="title_smart_goggle">Smart Goggle System</string>
+    <string name="status_ready">System ready</string>
+    <string name="status_processing">Processing...</string>
+    <string name="status_error">Error occurred</string>
+    <string name="button_start">Start Navigation</string>
+    <string name="button_stop">Stop</string>
+    <string name="button_settings">Settings</string>
+    
+    <!-- Status Messages -->
+    <string name="fps_label">FPS: %d</string>
+    <string name="objects_label">Objects: %d</string>
+    <string name="status_clear">Path clear</string>
+    <string name="status_monitoring">Monitoring: %d objects</string>
+    <string name="status_critical">CRITICAL: %d obstacles</string>
+    <string name="status_warning">WARNING: %d obstacles</string>
+    
+    <!-- Instructions -->
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions_text">1. Connect USB camera via OTG cable\n2. Grant camera and audio permissions\n3. Press \'Start Navigation\' to begin\n4. Listen for audio guidance\n5. Press \'Stop\' to end navigation</string>
+    
+    <!-- Permissions -->
+    <string name="permission_camera_title">Camera Permission</string>
+    <string name="permission_camera_message">This app needs camera access to detect obstacles</string>
+    <string name="permission_audio_title">Audio Permission</string>
+    <string name="permission_audio_message">This app needs audio access for voice guidance</string>
+    
+    <!-- Error Messages -->
+    <string name="error_camera_not_found">No camera found. Please connect a USB camera.</string>
+    <string name="error_permissions_denied">Required permissions not granted</string>
+    <string name="error_model_loading">Failed to load AI model</string>
+    <string name="error_initialization">System initialization failed</string>
+    
+    <!-- Audio Guidance -->
+    <string name="audio_path_clear">Path is clear ahead. Continue straight.</string>
+    <string name="audio_emergency_stop">EMERGENCY STOP!</string>
+    <string name="audio_caution">Caution!</string>
+    <string name="audio_wall_detected">Wall detected</string>
+    <string name="audio_obstacle_ahead">Obstacle ahead</string>
+    <string name="audio_obstacle_left">Obstacle on your left</string>
+    <string name="audio_obstacle_right">Obstacle on your right</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_audio_volume">Audio Volume</string>
+    <string name="settings_audio_rate">Speech Rate</string>
+    <string name="settings_detection_sensitivity">Detection Sensitivity</string>
+    <string name="settings_guidance_frequency">Guidance Frequency</string>
+    
+    <!-- Accessibility -->
+    <string name="accessibility_start_button">Start navigation button</string>
+    <string name="accessibility_stop_button">Stop navigation button</string>
+    <string name="accessibility_settings_button">Settings button</string>
+    <string name="accessibility_status_text">Current system status</string>
+</resources>
+

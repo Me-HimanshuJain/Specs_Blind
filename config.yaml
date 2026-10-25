@@ -1,0 +1,132 @@
+# Enhanced Smart Goggle System Configuration
+# Optimized for both high-performance and low-end devices
+
+# Device detection: set to 'auto' for automatic, 'high' for high-end, 'low' for low-end
+device_profile: 'auto'
+
+# Camera settings (automatically adjusted based on device_profile)
+camera:
+  device_id: 0
+  width: 640              # Optimized for real-time processing
+  height: 480             # Optimized for real-time processing
+  fps: 60                 # MAXIMUM FPS for low latency (up from 30)
+  frame_skip: 0           # PROCESS EVERY FRAME - NO SKIPPING (was 1)
+
+# YOLO settings
+yolo:
+  model_path: "yolov8n.pt"  # Use yolov8n for balance, yolov5n for ultra-low-end
+  confidence_threshold: 0.3
+  iou_threshold: 0.45
+  detection_frequency: 1     # RUN DETECTION EVERY FRAME - NO SKIPPING (was 5)
+  inference_size: 416        # Increased for better accuracy (was 320)
+  half_precision: false      # Set to true for faster inference on GPUs (fp16), ignored on CPU
+
+# Kalman filter settings
+kalman:
+  state_dim: 7
+  measurement_dim: 4
+  process_noise: 0.01
+  measurement_noise: 0.1
+
+# Tracking settings
+tracking:
+  max_age: 10             # FASTER CLEANUP - remove dead tracks quicker
+  min_hits: 1             # IMMEDIATE TRACKING - start tracking faster for blind person
+  iou_threshold: 0.3
+
+# Audio feedback settings - ENHANCED
+audio:
+  min_distance: 0.3
+  max_distance: 15.0
+  update_interval: 0.5
+  language: "en"
+  volume: 0.9
+  rate: 150
+  min_confidence: 0.6
+  
+  # SMART ANNOUNCEMENT RULES - Anti-repetition
+  announcement_intervals:
+    person_moving: 1.0      # REAL-TIME: every 1 second
+    person_stationary: 3.0  # REAL-TIME: every 3 seconds  
+    vehicle_moving: 0.8     # CRITICAL: every 0.8 seconds
+    vehicle_stationary: 2.0 # REAL-TIME: every 2 seconds
+    obstacle_moving: 1.2    # REAL-TIME: every 1.2 seconds
+    obstacle_stationary: 4.0 # REAL-TIME: every 4 seconds
+    static_object: 6.0      # REAL-TIME: every 6 seconds
+
+# Region settings
+regions:
+  center_threshold: 0.3
+  positions: ["far left", "left", "center", "right", "far right"]
+
+
+# Static object detection
+static_objects:
+  enabled: true
+  important_objects: ["chair", "dining table", "bed", "couch", "person", "car", "bottle", "cup", "backpack"]
+  min_confidence: 0.25
+
+
+# Add/update these sections in your config.yaml:
+
+audio:
+  min_distance: 0.5
+  max_distance: 10.0
+  rate: 160  # Speech rate
+  volume: 0.9
+  guidance_mode: 'discrete'  # discrete, verbose, silent
+  announcement_intervals:
+    critical: 1.0     # Emergency: every 1 second
+    warning: 4.0      # Warnings: every 4 seconds
+    normal: 8.0       # Normal guidance: every 8 seconds
+    clear: 15.0       # Clear path: every 15 seconds
+    direction_change: 3.0  # Direction changes: every 3 seconds
+  min_confidence: 0.3
+  priority_objects: ['person', 'car', 'motorcycle', 'bicycle', 'chair', 'wall']
+
+guidance:
+  safe_distance: 3.0
+  warning_distance: 1.5
+  critical_distance: 0.8
+  stop_distance: 0.6  # Distance for emergency stop (user requested 0.6m)
+
+# # Audio feedback settings - MORE FREQUENT ANNOUNCEMENTS
+# audio:
+#   min_distance: 0.5
+#   max_distance: 10.0
+#   update_interval: 1.0  # Reduced from 1.5
+#   language: "en"
+#   volume: 0.9
+#   rate: 150
+  
+#   # MORE FREQUENT ANNOUNCEMENT RULES
+#   announcement_intervals:
+#     person_moving: 1.5      # Reduced from 3.0 - Moving person every 1.5 seconds
+#     person_stationary: 4.0  # Reduced from 8.0  
+#     vehicle_moving: 1.0     # Reduced from 2.0
+#     vehicle_stationary: 3.0 # Reduced from 6.0
+#     obstacle_moving: 2.0    # Reduced from 4.0
+#     obstacle_stationary: 5.0 # Reduced from 10.0
+#     static_object: 8.0     # Reduced from 15.0
+
+
+# # Guidance settings - ENHANCED FOR BLIND NAVIGATION
+# guidance:
+#   safe_distance: 4.0    # Increased for better safety
+#   warning_distance: 2.0 # Increased for earlier warnings
+#   critical_distance: 1.0 # Increased for safety margin
+
+# Wall detection settings
+wall_detection:
+  enabled: true
+  edge_threshold1: 50
+  edge_threshold2: 150
+  min_wall_area: 1000
+  aspect_ratio_threshold: 3.0
+
+# Enhanced obstacle analysis
+obstacle_analysis:
+  enable_danger_assessment: true
+  enable_directional_guidance: true
+  enable_wall_detection: true
+  priority_objects: ["person", "car", "motorcycle", "bicycle", "wall", "chair", "dining table"]

@@ -1,0 +1,37 @@
+# This would be a ZIP file containing the complete Android project
+# For now, I'll create the key files that would be in the Android project
+
+# Android Project Structure:
+# SmartGoggleApp/
+# ├── app/
+# │   ├── src/main/
+# │   │   ├── java/com/smartgoggle/
+# │   │   │   ├── MainActivity.kt
+# │   │   │   ├── camera/
+# │   │   │   │   ├── USBCameraManager.kt
+# │   │   │   │   └── CameraPreview.kt
+# │   │   │   ├── ml/
+# │   │   │   │   ├── ObjectDetector.kt
+# │   │   │   │   ├── ObjectTracker.kt
+# │   │   │   │   └── KalmanTracker.kt
+# │   │   │   ├── audio/
+# │   │   │   │   ├── AudioGuidance.kt
+# │   │   │   │   └── TTSManager.kt
+# │   │   │   └── utils/
+# │   │   │       ├── DistanceCalculator.kt
+# │   │   │       └── PositionAnalyzer.kt
+# │   │   ├── assets/
+# │   │   │   └── yolov8n.tflite
+# │   │   ├── res/
+# │   │   │   ├── layout/
+# │   │   │   │   └── activity_main.xml
+# │   │   │   └── values/
+# │   │   │       └── strings.xml
+# │   │   └── AndroidManifest.xml
+# │   └── build.gradle
+# └── build.gradle
+
+# This is a placeholder for the actual ZIP file
+# The real implementation would contain all the Kotlin/Java files
+# and Android project configuration files
+
